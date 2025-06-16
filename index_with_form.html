@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <title>REDROOM PARTY | BUCHAREST UNDERGROUND TECHNO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      overflow: hidden;
+      font-family: 'Arial', sans-serif;
+    }
+    video.bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+    }
+    .content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+    }
+    .content img {
+      width: 160px;
+      margin-bottom: 20px;
+    }
+    .content h1 {
+      font-size: 3em;
+      color: #e50914;
+      text-shadow: 0 0 20px black;
+    }
+    .content p {
+      font-size: 1.2em;
+      color: #ddd;
+      text-shadow: 0 0 10px black;
+      margin-bottom: 30px;
+    }
+    .btn {
+      padding: 12px 24px;
+      background-color: #e50914;
+      border: none;
+      color: white;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+    .btn:hover {
+      background-color: #b2060f;
+      transform: scale(1.05);
+    }
+    .form-container {
+      display: none;
+      margin-top: 30px;
+    }
+    .form-container input {
+      padding: 10px;
+      margin: 8px;
+      width: 200px;
+      border: none;
+      border-bottom: 2px solid #e50914;
+      background: transparent;
+      color: white;
+    }
+    .form-container input::placeholder {
+      color: #ccc;
+    }
+    .form-container input[type="submit"] {
+      background-color: #e50914;
+      color: white;
+      width: auto;
+      border: none;
+      cursor: pointer;
+    }
+
+    @media (max-width: 600px) {
+      .content h1 {
+        font-size: 2em;
+      }
+      .content p {
+        font-size: 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <video class="bg" autoplay muted loop playsinline>
+    <source src="video-ta.mp4" type="video/mp4">
+  </video>
+
+  <div class="content">
+    <img src="redroom_logo_transparent.png" alt="REDROOM Logo">
+    <h1>REDROOM</h1>
+    <p>IT’S A STATE OF MIND.</p>
+    <button class="btn" onclick="document.querySelector('.form-container').style.display='block'; this.style.display='none';">
+      Join the Room
+    </button>
+    <div class="form-container">
+      <form>
+        <input type="text" name="nume" placeholder="Numele tău" required><br>
+        <input type="email" name="email" placeholder="Email" required><br>
+        <input type="text" name="telefon" placeholder="Telefon (opțional)"><br>
+        <input type="submit" value="Trimite">
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
